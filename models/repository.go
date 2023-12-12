@@ -1,17 +1,20 @@
 package models
 
 type Repository interface {
+	GetProduct(id int) Product
 
-    GetProduct(id int) Product
+	GetProducts() []Product
 
-    GetProducts() []Product
+	GetProductPage(page, pageSize int) (products []Product, totalAvailable int)
 
-    GetProductPage(page, pageSize int) (products []Product, totalAvailable int)
+	GetProductPageCategory(categoryId int, page, pageSize int) (products []Product,
+		totalAvailable int)
 
-    GetProductPageCategory(categoryId int, page, pageSize int) (products []Product, 
-        totalAvailable int)
-    
-    GetCategories() []Category
+	GetCategories() []Category
 
-    Seed()
+	GetOrder(id int) Order
+	GetOrders() []Order
+	SaveOrder(*Order)
+
+	Seed()
 }
