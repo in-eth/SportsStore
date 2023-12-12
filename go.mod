@@ -2,7 +2,10 @@ module sportsstore
 
 go 1.17
 
-require platform v1.0.0
+require (
+	modernc.org/sqlite v1.13.1
+	platform v1.0.0
+)
 
 require (
 	github.com/gorilla/securecookie v1.1.1 // indirect
@@ -21,7 +24,6 @@ require (
 	modernc.org/mathutil v1.4.1 // indirect
 	modernc.org/memory v1.0.5 // indirect
 	modernc.org/opt v0.1.1 // indirect
-	modernc.org/sqlite v1.13.1 // indirect
 	modernc.org/strutil v1.1.1 // indirect
 	modernc.org/token v1.0.0 // indirect
 )
