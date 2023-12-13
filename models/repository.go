@@ -4,6 +4,7 @@ type Repository interface {
 	GetProduct(id int) Product
 
 	GetProducts() []Product
+	SaveProduct(*Product)
 
 	GetProductPage(page, pageSize int) (products []Product, totalAvailable int)
 
