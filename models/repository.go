@@ -12,10 +12,13 @@ type Repository interface {
 		totalAvailable int)
 
 	GetCategories() []Category
+	SaveCategory(*Category)
 
 	GetOrder(id int) Order
 	GetOrders() []Order
 	SaveOrder(*Order)
+	SetOrderShipped(*Order)
 
 	Seed()
+	Init()
 }
